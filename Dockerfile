@@ -7,3 +7,9 @@ RUN apt-get install -y google-chrome-stable
 
 RUN npm install chromedriver
 RUN npm install https://gitlab.com/gitlab-org/gitlab-selenium-server.git
+
+RUN set -x \
+# Install ngrok (latest official stable from https://ngrok.com/download).
+&& curl -Lo /ngrok.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip \
+&& unzip -o /ngrok.zip -d /bin \
+&& rm -f /ngrok.zip \
