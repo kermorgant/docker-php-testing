@@ -17,7 +17,7 @@ RUN set -x \
 && unzip -o /ngrok.zip -d /bin \
 && rm -f /ngrok.zip
 
-RUN npm install chromedriver -g
-RUN npm install https://gitlab.com/gitlab-org/gitlab-selenium-server.git -g
+RUN npm install chromedriver -p /root
+RUN npm install https://gitlab.com/gitlab-org/gitlab-selenium-server.git -p /root
 
 USER docker
